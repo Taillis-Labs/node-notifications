@@ -1,0 +1,30 @@
+{
+  "use-multi-dispatcher": {
+    "sender": {
+      "name": "John",
+      "email": "john.doe@gmail.com"
+    },
+    "receiver": {
+      "email": "jane.doe@gmail.com",
+      "name": "Jane",
+      "settings": {
+        "useSMTP": true,
+        "useMailgun": true
+      }
+    }
+  },
+  "use-one-dispatcher": {
+    "sender": {
+      "name": "John",
+      "email": "john.doe@gmail.com"
+    },
+    "receiver": {
+      "email": "jane.doe@gmail.com",
+      "name": "Jane",
+      "settings": {
+        "useSMTP": true,
+        "useMailgun": false
+      }
+    }
+  }
+}

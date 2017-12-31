@@ -1,0 +1,40 @@
+{
+  "dependencies": {
+    "@reactivex/rxjs": "5.0.0",
+    "chai": "^4.1.2",
+    "lodash": "^4.17.4",
+    "mailgun-js": "^0.14.0",
+    "mocha": "^4.1.0",
+    "nodemailer": "^4.4.1",
+    "rxjs": "^5.5.6",
+    "sendgrid": "^5.2.3",
+    "string-template": "^1.0.0"
+  },
+  "name": "node-notifications",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha test/test.*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Taillis-Labs/node-notifications.git"
+  },
+  "keywords": [
+    "Twilio",
+    "Sendgrid",
+    "Mailgun",
+    "NodeMailer",
+    "OneSignal",
+    "FCM",
+    "MessageBird"
+  ],
+  "author": "HARRAZ Abdelghafour",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Taillis-Labs/node-notifications/issues"
+  },
+  "homepage": "https://github.com/Taillis-Labs/node-notifications#readme",
+  "description": ""
+}

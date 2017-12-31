@@ -1,0 +1,30 @@
+{
+  "valid-message": {
+    "sender": {
+      "name": "John",
+      "email": "john.doe@gmail.com"
+    },
+    "receiver": {
+      "email": "jane.doe@gmail.com",
+      "name": "Jane"
+    }
+  },
+  "missing-from-message": {
+    "sender": {
+      "name": "John"
+    },
+    "receiver": {
+      "email": "jane.doe@gmail.com",
+      "name": "Jane"
+    }
+  },
+  "missing-to-message": {
+    "sender": {
+      "name": "John",
+      "email": "john.doe@gmail.com"
+    },
+    "receiver": {
+      "name": "Jane"
+    }
+  }
+}
