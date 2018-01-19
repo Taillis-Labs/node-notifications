@@ -20,7 +20,7 @@ class NotificationManager {
         new Error(`No Dispatcher has been registered for type notification of ${notification.getType()}`)
       )
     }
-
+    
     return Rx.Observable.from(this.dispatchers[notification.getType()])
       .flatMap(dispatcher => dispatcher.dispatch(notification));
   }

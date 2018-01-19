@@ -1,0 +1,19 @@
+{
+  "valid-message": {
+    "to": "+212600429458",
+    "from": "+16503963648",
+    "body": "Hello sir"
+  },
+  "missing-to-message": {
+    "from": "+16503963648",
+    "body": "Hello sir"
+  },
+  "missing-from-message": {
+    "to": "+212600429458",
+    "body": "Hello sir"
+  },
+  "missing-body-message": {
+    "to": "+212600429458",
+    "from": "+16503963648"
+  }
+}

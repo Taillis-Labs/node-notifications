@@ -1,0 +1,15 @@
+{
+  "valid-payload": {
+    "room": "testroom",
+    "event": "testevent",
+    "data": "validdata"
+  },
+  "missing-event-payload": {
+    "room": "testroom",
+    "data": "validdata"
+  },
+  "missing-room-payload": {
+    "event": "testevent",
+    "data": "validdata"
+  }
+}

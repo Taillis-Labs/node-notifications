@@ -1,9 +1,10 @@
 const Rx = require('@reactivex/rxjs');
-class SMSNotificationDispatcher {
-  constructor(notificationType, messageBuilder, smsService) {
+
+class WebSocketDispatcher {
+  constructor(notificationType, messageBuilder, webSocketService) {
     this.notificationType = notificationType;
     this.messageBuilder = messageBuilder;
-    this.smsService = smsService;
+    this.webSocketService = webSocketService;
   }
 
   getType() {
@@ -15,7 +16,7 @@ class SMSNotificationDispatcher {
   }
 
   async send(notification) {
-    return this.smsService.send(notification);
+    return this.webSocketService.send(notification);
   }
 
   shouldDispatch(notification) {
@@ -26,10 +27,10 @@ class SMSNotificationDispatcher {
     const shouldDispatch = this.shouldDispatch(notification);
     if (shouldDispatch) {
       return Rx.Observable.fromPromise(this.createNotification(notification))
-        .flatMap(notification => Rx.Observable.fromPromise(this.send(notification)));
+        .flatMap(webSocketNotification => Rx.Observable.fromPromise(this.send(webSocketNotification)));
     }
     return Rx.Observable.empty();
   }
 }
 
-module.exports = SMSNotificationDispatcher;
+module.exports = WebSocketDispatcher;

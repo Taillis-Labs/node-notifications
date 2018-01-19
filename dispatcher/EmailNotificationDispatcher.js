@@ -13,11 +13,11 @@ class EmailNotificationDispatcher {
     return this.notificationType;
   }
 
-  async createEmailNotification(notification) {
-    return this.messageBuilder.build(notification);
+  async createNotification(data) {
+    return this.messageBuilder.build(data);
   }
 
-  async sendEmail(emailNotification) {
+  async send(emailNotification) {
     return this.emailService.send(emailNotification);
   }
 
@@ -28,8 +28,8 @@ class EmailNotificationDispatcher {
   dispatch(notification) {
     const shouldDispatch = this.shouldDispatch(notification);
     if (shouldDispatch) {
-      return Rx.Observable.fromPromise(this.createEmailNotification(notification))
-        .flatMap(emailNotification => Rx.Observable.fromPromise(this.sendEmail(emailNotification)));
+      return Rx.Observable.fromPromise(this.createNotification(notification))
+        .flatMap(emailNotification => Rx.Observable.fromPromise(this.send(emailNotification)));
     }
     return Rx.Observable.empty();
   }
