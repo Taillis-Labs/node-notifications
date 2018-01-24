@@ -7,9 +7,7 @@ const { SMSNotificationDispatcher } = require('./../dispatcher');
 const { combineBuildFunctions, smsBuilder } = require('./../message-builder');
 const notificationTypes = require('./data/notification-ypes.json');
 const fixtures = require('./data/twilio.fixtures.json');
-
-const accountSid = 'ACbf46709b0f8b87eb3359e48eb8a0ad92';
-const authToken = 'a9a1bce02343fe3199c6bd798b32b0d6';
+const { accountSid, authToken } = require('./data/twilio.auth.json');
 
 const dummySMSBuilder = {
   canBuild: () => true,
@@ -73,7 +71,7 @@ describe('SMS dispatching', () => {
     );
   }).timeout('5s');
 
-  
+
   it('should not be able to dispatch when `body` is corrupted', (done) => {
     const { to, from, body } = fixtures['missing-body-message'];
 
