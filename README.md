@@ -1,1 +1,2 @@
-# node-notifications
+# Description
+node-notifications API
